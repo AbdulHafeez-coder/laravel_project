@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 
 <section>
     <div class="card shadow-sm">
@@ -67,6 +68,7 @@
         <button type="submit" class="btn btn-primary">update</button>
         <a href="{{ route('contacts.index') }}" class="btn btn-secondary">Cancel</a>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </section>
 
 @endsection

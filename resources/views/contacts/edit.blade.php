@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 
 <section>
 
@@ -36,6 +37,7 @@
             <a href="{{ route('contacts.index') }}" class="btn btn-secondary">Cancel</a>
         </form>
     </div>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </section>
 
 @endsection

@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 <section>
     <section class="card shadow-sm">
         <div class="card-body">
@@ -37,6 +38,11 @@
                     <tr>
                         <td>{{ $contact->id }}</td>
                         <td>{{ $contact->name }}</td>
+                        <td>
+                            @if ($contact->picture)
+                                <img src="{{ asset('storage/' . $contact->picture) }}" alt="{{ $contact->name }}" class="img-thumbnail" style="width: 100px;">
+                            @endif
+                        </td>
                         <td>{{ $contact->email }}</td>
                         <td>{{ $contact->phone_1 }}</td>
                         <td>
@@ -65,6 +71,7 @@
 
             </div>
         </div>
+        <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     </section>
 
 

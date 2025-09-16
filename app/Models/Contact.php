@@ -13,8 +13,10 @@ class Contact extends Model
     protected $fillable = [
         'name',
         'email',
-        'phone',
-        'User_id'
+        'phone_1',
+        'phone_2',
+        'address',
+        'user_id'
     ];
 
     protected static function booted()

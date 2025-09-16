@@ -44,6 +44,8 @@ class ContactController extends Controller
             'phone_2' => 'nullable|digits:11|unique:contacts,phone_2',
             'address' => 'nullable|string',
         ]);
+        $validated['user_id'] = auth()->id();
+
 
         Contact::create($validated);
 
@@ -88,9 +90,9 @@ class ContactController extends Controller
 
         $validated = $request->validate([
             'name'    => 'required|string|max:255',
-            'email'   => 'required|email|unique:contacts,email,' . ($contact->id),
-            'phone_1' => 'required|digits:11|unique:contacts,phone_1,' . ($contact->id),
-            'phone_2' => 'nullable|digits:11|unique:contacts,phone_2,' . ($contact->id),
+            'email'   => 'required|email|unique:contacts,email,',
+            'phone_1' => 'required|digits:11|unique:contacts,phone_1,',
+            'phone_2' => 'nullable|digits:11|unique:contacts,phone_2,',
             'address' => 'nullable|string',
         ]);
         Contact::find($id)->update($validated);

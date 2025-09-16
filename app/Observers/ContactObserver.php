@@ -9,7 +9,12 @@ class ContactObserver
     /**
      * Handle the contact "created" event.
      */
-    public function saving(contact $contact): void {}
+    public function saving(contact $contact): void
+    {
+        if (auth()->check()) {
+            $contact->user_id = auth()->id();
+        }
+    }
 
     /**
      * Handle the contact "updated" event.
